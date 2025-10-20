@@ -1,139 +1,41 @@
-<!-- Sticky Navigation Bar -->
-<nav style="background-color: #00796b; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 1000;">
-  <a href="#home" style="color: white; margin: 10px; text-decoration: none;">Home</a>
-  <a href="#about" style="color: white; margin: 10px; text-decoration: none;">About</a>
-  <a href="#culture" style="color: white; margin: 10px; text-decoration: none;">Culture</a>
-  <a href="#contact" style="color: white; margin: 10px; text-decoration: none;">Contact</a>
+<!-- Navigation Bar -->
+<nav style="background-color: #00796b; padding: 10px; text-align: center;">
+  <a href="#" onclick="showSection('home')" style="color: white; margin: 10px; text-decoration: none;">Home</a>
+  <a href="#" onclick="showSection('about')" style="color: white; margin: 10px; text-decoration: none;">About</a>
+  <a href="#" onclick="showSection('culture')" style="color: white; margin: 10px; text-decoration: none;">Culture</a>
+  <a href="#" onclick="showSection('contact')" style="color: white; margin: 10px; text-decoration: none;">Contact</a>
 </nav>
-<section id="home" style="padding: 40px; text-align: center;">
+
+<!-- Sections -->
+<section id="home" style="padding: 40px; text-align: center; display: block;">
   <h2>Welcome to ALOTAMA History Squad</h2>
   <p>This is where we explore the Filipino culture and history with pride and curiosity.</p>
 </section>
 
-<section id="about" style="background-color: #f4f4f4; padding: 40px; text-align: center;">
+<section id="about" style="padding: 40px; text-align: center; display: none;">
   <h2>About Us</h2>
   <p>We are students from ALOTAMA History Squad, studying Pag-aaral ng Kasaysayan at Lipunang Pilipino.</p>
 </section>
 
-<section id="culture" style="padding: 40px; text-align: center;">
+<section id="culture" style="padding: 40px; text-align: center; display: none;">
   <h2>Our Culture</h2>
   <p>Discover traditions, beliefs, and stories that shaped our Filipino identity.</p>
 </section>
 
-<section id="contact" style="background-color: #f4f4f4; padding: 40px; text-align: center;">
+<section id="contact" style="padding: 40px; text-align: center; display: none;">
   <h2>Contact Us</h2>
-  <p>For collaboration or school projects, reach out to us at <strong>joellianeautor620@gmail.com</strong>.</p>
+  <p>Reach us at <strong>alotama.history@gmail.com</strong>.</p>
 </section>
-</nav>
-<!DOCTYPE html>
-<html lang="tl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kultura ng Pilipinas – ALOTAMA History Squad</title>
-   <style>
-    html {
-  scroll-behavior: smooth;
+
+<!-- JavaScript -->
+<script>
+function showSection(id) {
+  // Hide all sections first
+  document.querySelectorAll("section").forEach(sec => sec.style.display = "none");
+  // Then show the selected section
+  document.getElementById(id).style.display = "block";
 }
-        body {
-          <!-- Header Banner -->
-<header style="background-color: #004d40; color: white; text-align: center; padding: 30px 10px;">
-<img src="alotama_logo.png" alt="ALOTAMA History Squad Logo" width="120" style="border-radius: 15px; display: block; margin: 0 auto 10px auto;">
-  <h1 style="margin: 10px 0; font-size: 28px;">ALOTAMA History Squad</h1>
-  <p style="font-size: 18px;">Pag-aaral ng Kasaysayan at Lipunang Pilipino</p>
-</header>
-            <!-- Home Section -->
-<section id="home" style="padding: 50px; text-align: center;">
-  <h1>Kultura ng Pilipinas</h1>
-  <p>Maligayang pagdating sa aming website! Dito namin ipapakita ang mayamang kultura ng ating bansa — ang Pilipinas.</p>
-</section>
-
-<!-- About Section -->
-<section id="about" style="padding: 50px; background-color: #f2f2f2;">
-  <h2>Tungkol sa Amin</h2>
-  <p>Ang ALOTAMA History Squad ay binubuo ng mga mag-aaral na naglalayong ipakita at ipahayag ang ganda ng kulturang Pilipino sa pamamagitan ng proyekto sa PKLP.</p>
-</section>
-
-<!-- Culture Section -->
-<section id="culture" style="padding: 50px;">
-  <h2>Kultura</h2>
-  <p>Sa bahaging ito, aming tatalakayin ang iba't ibang aspeto ng kulturang Pilipino tulad ng wika, pagkain, kasuotan, at sining.</p>
-</section>
-
-<!-- Members Section -->
-<section id="members" style="padding: 50px; background-color: #f2f2f2;">
-  <h2>Mga Miyembro ng Grupo</h2>
-  <ul>
-    <li>Autor, Joelliane</li>
-    <li>Araguas, Andrea</li>
-    <li>Luste, Suzanne</li>
-    <li>Tabuzo, Ashley</li>
-    <li>Alcazar, Cyrah</li>
-    <li>Almar, Trisha</li>
-    <li>Omarkhan, Norham</li>
-  </ul>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" style="padding: 50px;">
-  <h2>Makipag-ugnayan sa Amin</h2>
-  <p>Para sa mga katanungan o puna, maaari kaming lapitan sa paaralan o mag-iwan ng mensahe sa aming guro sa PKLP.</p>
-</section>
-            font-family: 'Poppins', sans-serif;
-            background-color: #fff8e7;
-            color: #2c2c2c;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #d4a017;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-        }
-        section {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-            line-height: 1.6;
-        }
-        h2 {
-            color: #b8860b;
-            border-bottom: 2px solid #ffd700;
-            padding-bottom: 5px;
-        }
-        footer {
-            background-color: #d4a017;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-        }
-        img {
-            max-width: 100%;
-            border-radius: 10px;
-            margin: 10px 0;
-        }
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-        }
-        .highlight {
-            background-color: #fff3b0;
-            padding: 10px;
-            border-radius: 10px;
-        }
-        .group-name {
-            font-size: 18px;
-            font-weight: bold;
-            background-color: #f7d774;
-            color: #4a3600;
-            padding: 10px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-top: 10px;
-        }
+</script>
     </style>
 </head>
 <body>
